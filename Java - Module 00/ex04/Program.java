@@ -8,16 +8,21 @@ public class Program {
         for (int i = 0; i < input.length(); i++) {
             freq[input.charAt(i)]++;
 //            System.out.println("input[i] = " + input.charAt(i) + " freq[input.charAt(i)] = " + freq[input.charAt(i)]);
-
         }
-//        System.out.println(freq);
+//        for (int i = 0; i < freq.length; i++) {
+//            if (freq[i] > 0) {
+//                System.out.println("'" + (char) i + "' : " + freq[i]);
+//            }
+//        }
         return freq;
     }
 
     // Find top 10 most frequent characters
-    public static void findTop10(int[] freq, char[] topChars, int[] topFreqs) {
+    public static void findTop10(int[] freq, char[] topChars, int[] topFreqs)
+    {
         for (int i = 0; i < 65536; i++) {
-            if (freq[i] == 0) continue;
+            if (freq[i] == 0)
+                continue;
 
             for (int j = 0; j < 10; j++) {
                 if (freq[i] > topFreqs[j] || (freq[i] == topFreqs[j] && i < topChars[j])) {
@@ -34,20 +39,6 @@ public class Program {
         }
     }
 
-//    // Scale frequencies to fit histogram height (m0ax 10)
-//    public static int[] scaleFrequencies(int[] topFreqs) {
-//        int[] heights = new int[10];
-//        int max = topFreqs[0];
-//        for (int i = 0; i < 10; i++) {
-//            if (max == 0) {
-//                heights[i] = 0;
-//            } else {
-//                heights[i] = (topFreqs[i] * 10) / max;
-//            }
-//        }
-//        return heights;
-//    }
-
     public static void printHistogram(char[] topChars, int[] topCounts) {
         int maxCount = topCounts[0];
         if (maxCount == 0) {
@@ -55,7 +46,7 @@ public class Program {
             return;
         }
 
-        // First find the height of each column and max number length
+        // the height of each column and max number length
         int[] heights = new int[10];
         int maxNumLength = 0;
         for (int col = 0; col < 10; col++) {
@@ -94,10 +85,11 @@ public class Program {
 
 
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        String input = in.nextLine();
-        in.close();
+//        Scanner in = new Scanner(System.in);
+//        String input = in.nextLine();
+//        in.close();
 
+        String input = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASSSSSSSSSSSSSSSSSSSSSSSSDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDWEWWKFKKDKKDSKAKLSLDKSKALLLLLLLLLLRTRTETWTWWWWWWWWWWOOOOOOO42";
         int[] freq = countFrequencies(input);
         char[] topChars = new char[10];
         int[] topFreqs = new int[10];

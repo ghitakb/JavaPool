@@ -38,7 +38,7 @@ public class Program {
     }
 
     // Prints the final chart output line by line
-    public static void printProgressChart(String minValues) {
+    public static void printMinValueChart(String minValues) {
         Scanner minScanner = new Scanner(minValues);
         int weekNumber = 1;
 
@@ -57,7 +57,7 @@ public class Program {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        StringBuilder minResults = new StringBuilder();
+        String minResults = "";
         int expectedWeek = 1;
 
         while (expectedWeek <= 18) {
@@ -71,11 +71,11 @@ public class Program {
 
             String scoresLine = input.nextLine();
             int min = findMinValue(scoresLine);
-            minResults.append(min).append(" ");
+            minResults = minResults + min + " ";
             expectedWeek++;
         }
 
-        printProgressChart(minResults.toString());
+        printMinValueChart(minResults.toString());
         input.close();
     }
 }
