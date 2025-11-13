@@ -30,8 +30,7 @@ public class Menu {
     private void handleAddUser(Scanner input) {
         System.out.println("Enter a user name and a balance");
         System.out.print("-> ");
-        String line = input.nextLine().trim();
-        String[] data = line.split("\\s+");
+        String[] data = input.nextLine().trim().split("\\s+");
 
         if (data.length != 2) {
             System.err.println("Invalid input. Expect user name (String) and a balance (Number)");
@@ -60,7 +59,7 @@ public class Menu {
     private void handleViewBalance(Scanner input) {
         System.out.println("Enter a user ID");
         System.out.print("-> ");
-        String line = input.nextLine();
+        String line = input.nextLine().trim();
 
         try {
             int id = Integer.parseInt(line);
@@ -82,7 +81,7 @@ public class Menu {
     private void handleTransfer(Scanner input) {
         System.out.println("Enter sender ID, recipient ID, and transfer amount");
         System.out.print("-> ");
-        String line = input.nextLine();
+        String line = input.nextLine().trim();
         String[] data = line.split("\\s+");
 
         if (data.length != 3) {
@@ -116,7 +115,7 @@ public class Menu {
         int userId;
 
         try {
-            userId = Integer.parseInt(input.nextLine());
+            userId = Integer.parseInt(input.nextLine().trim());
             Transaction[] userTx = transactions.getUserTransactions(userId);
 
             for (Transaction t : userTx) {
@@ -138,7 +137,7 @@ public class Menu {
     private void handleRemoveTransaction(Scanner input) {
         System.out.println("Enter a user ID and a transfer ID");
         System.out.print("-> ");
-        String[] parts = input.nextLine().split("\\s");
+        String[] parts = input.nextLine().trim().split("\\s+");
 
         if (parts.length != 2) {
             System.err.println("Invalid input. Expect user ID and a transfer ID");
@@ -258,4 +257,3 @@ public class Menu {
         }
     }
 }
-

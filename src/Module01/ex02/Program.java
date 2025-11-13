@@ -15,9 +15,9 @@ public class Program {
             System.out.println("Users list:");
             System.out.println(usersList);
 
-            System.out.println(usersList.retrieveById(1));
-            System.out.println(usersList.retrieveByIndex(1));
-            System.out.println("number of Users = " + usersList.getUsersNumber());
+            System.out.println("\nuser with ID = 1\n" + usersList.retrieveById(1));
+            System.out.println("\nuser with index = 1\n" + usersList.retrieveByIndex(1));
+            System.out.println("\nnumber of total Users\n" + usersList.getUsersNumber());
         }
         catch (Exception e) {
             System.err.println("An unexpected error occurred: " + e.getMessage());

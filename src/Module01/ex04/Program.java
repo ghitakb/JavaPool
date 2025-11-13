@@ -54,7 +54,7 @@ public class Program {
             } else {
                 System.out.println("Unpaired transactions found:");
                 for (Transaction t : unpaired) {
-                    System.out.println(t + "\n");
+                    System.out.println(t);
                 }
             }
         } catch (Exception e) {
