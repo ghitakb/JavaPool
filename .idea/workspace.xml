@@ -5,13 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6dea0495-ddff-4efa-a569-452bc9eca474" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/JavaPool.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/JavaPool.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex00/Program.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex01/Program.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex02/Program.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex03/Program.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex04/Program.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex05/Program.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java - Module 00/ex00/Program.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java - Module 00/ex00/Program.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java - Module 00/ex01/Program.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java - Module 00/ex01/Program.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java - Module 00/ex02/Program.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java - Module 00/ex02/Program.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java - Module 00/ex03/Program.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java - Module 00/ex03/Program.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java - Module 00/ex04/Program.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java - Module 00/ex04/Program.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java - Module 00/ex05/Program.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java - Module 00/ex05/Program.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java - Module 00/test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java - Module 00/test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java - Module 01/ex00/Program.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java - Module 01/ex00/Program.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java - Module 01/ex00/Transaction$TransferCategory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java - Module 01/ex00/Transaction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java - Module 01/ex00/Transaction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java - Module 01/ex00/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java - Module 01/ex00/User.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +51,11 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -40,7 +63,10 @@
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/AsusVivoBook/Desktop/JavaPool",
     "onboarding.tips.debug.path": "/home/gkarib/IdeaProjects/Java - Module 00/src/main/java/org/example/Main.java",
-    "settings.editor.selected.configurable": "preferences.keymap"
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "editor.preferences.completion"
   }
 }]]></component>
   <component name="RunManager">
