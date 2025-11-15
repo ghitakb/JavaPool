@@ -1,9 +1,10 @@
 import java.util.Scanner;
 
+
 public class Program {
 
     // Reads and validates the week header (e.g., "Week 1")
-    public static void validateWeekHeader(String inputLine, int expectedWeek) {
+    public static void validateWeekHeader(String inputLine, int expectedWeek){
         if (!inputLine.equals("Week " + expectedWeek)) {
             System.err.println("IllegalArgument");
             System.exit(-1);
@@ -11,19 +12,17 @@ public class Program {
     }
 
     // Extracts the minimum value from a string of 5 test scores
-    public static int findMinValue(String line) {
+    public static int findMinValue(String line){
         Scanner lineScanner = new Scanner(line);
         int min = 10;
         int count = 0;
 
         while (lineScanner.hasNextInt()) {
             int num = lineScanner.nextInt();
-            if (num < 1 || num > 9) {
-                continue; // skip invalid scores silently
-            }
-            if (num < min) {
+            if (num < 1 || num > 9)
+                continue;
+            if (num < min)
                 min = num;
-            }
             count++;
         }
 
@@ -33,12 +32,11 @@ public class Program {
             System.err.println("IllegalArgument");
             System.exit(-1);
         }
-
         return min;
     }
 
     // Prints the final chart output line by line
-    public static void printMinValueChart(String minValues) {
+    public static void printMinValueChart(String minValues){
         Scanner minScanner = new Scanner(minValues);
         int weekNumber = 1;
 
@@ -51,11 +49,10 @@ public class Program {
             System.out.println(">");
             weekNumber++;
         }
-
         minScanner.close();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         String minResults = "";
         int expectedWeek = 1;
@@ -74,7 +71,6 @@ public class Program {
             minResults = minResults + min + " ";
             expectedWeek++;
         }
-
         printMinValueChart(minResults.toString());
         input.close();
     }

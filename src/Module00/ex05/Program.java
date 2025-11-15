@@ -1,26 +1,19 @@
 import java.util.Scanner;
 
+
 public class Program {
 
-//    check if name is repeated
     private static final int MAX_STUDENTS = 10;
     private static final int MAX_CLASSES = 10;
-    private static final int SEPT_DAYS = 30; // September 2020
+    private static final int SEPT_DAYS = 30;
     private static final String[] WEEK_DAYS = {"MO", "TU", "WE", "TH", "FR", "SA", "SU"};
 
-    // Utility messages
-    private static void error(String msg)
-    {
+    private static void error(String msg){
         System.err.println("Error: " + msg);
     }
 
-//    private static void info(String msg) {
-//        System.out.println("Info:  " + msg);
-//    }
-
     // Validation helpers
-    private static boolean isValidHour(int hour)
-    {
+    private static boolean isValidHour(int hour){
         if (hour < 1 || hour > 6) {
             error("Class hour must be between 1pm and 6pm.");
             return (false);
@@ -28,8 +21,7 @@ public class Program {
         return (true);
     }
 
-    private static boolean isValidDay(String day)
-    {
+    private static boolean isValidDay(String day){
         for (String d : WEEK_DAYS)
         {
             if (d.equals(day))
@@ -39,8 +31,7 @@ public class Program {
         return (false);
     }
 
-    private static boolean isValidDayOfMonth(int day)
-    {
+    private static boolean isValidDayOfMonth(int day){
         if (day < 1 || day > SEPT_DAYS)
         {
             error("Day of month must be between 1 and " + SEPT_DAYS + ".");
@@ -50,8 +41,7 @@ public class Program {
     }
 
     // Input reading PART 1
-    private static int readStudents(Scanner sc, String[] students)
-    {
+    private static int readStudents(Scanner sc, String[] students){
         int count = 0;
         while (sc.hasNextLine()) {
             String line = sc.nextLine().trim();
@@ -78,8 +68,7 @@ public class Program {
     }
 
     // Input reading PART 2
-    private static int readClasses(Scanner sc, int[] hours, String[] days)
-    {
+    private static int readClasses(Scanner sc, int[] hours, String[] days){
         int count = 0;
         while (sc.hasNextLine())
         {
@@ -122,8 +111,7 @@ public class Program {
     }
 
     // Input reading PART 3
-    private static int findStudent(String[] students, int count, String name)
-    {
+    private static int findStudent(String[] students, int count, String name){
         for (int i = 0; i < count; i++)
         {
             if (students[i].equals(name))
@@ -132,8 +120,7 @@ public class Program {
         return (-1);
     }
 
-    private static void readAttendance(Scanner sc, String[] students, int studentCount, int[][] attendance)
-    {
+    private static void readAttendance(Scanner sc, String[] students, int studentCount, int[][] attendance){
         while (sc.hasNextLine())
         {
             String line = sc.nextLine().trim();
@@ -178,8 +165,7 @@ public class Program {
     }
 
     // Timetable building and sorting
-    private static int buildTimetable(int[] cHours, String[] cDays, int cCount, int[] tHours, String[] tDays, int[] tDates)
-    {
+    private static int buildTimetable(int[] cHours, String[] cDays, int cCount, int[] tHours, String[] tDays, int[] tDates){
         String[] dayName = new String[SEPT_DAYS + 1];
         for (int d = 1; d <= SEPT_DAYS; d++)
         {
@@ -202,22 +188,19 @@ public class Program {
         return (count);
     }
 
-    private static void swap(int[] arr, int i, int j)
-    {
+    private static void swap(int[] arr, int i, int j){
         int tmp = arr[i];
         arr[i] = arr[j];
         arr[j] = tmp;
     }
 
-    private static void swap(String[] arr, int i, int j)
-    {
+    private static void swap(String[] arr, int i, int j){
         String tmp = arr[i];
         arr[i] = arr[j];
         arr[j] = tmp;
     }
 
-    private static void sortTimetable(int[] hours, String[] days, int[] dates, int n)
-    {
+    private static void sortTimetable(int[] hours, String[] days, int[] dates, int n){
         for (int i = 0; i < n - 1; i++)
         {
             int min = i;
@@ -232,8 +215,7 @@ public class Program {
         }
     }
 
-    // Output
-    private static void printHeader(int[] hours, String[] days, int[] dates, int count)
+    // Outputprivate static void printHeader(int[] hours, String[] days, int[] dates, int count)
     {
         System.out.printf("%-12s", "");
         for (int i = 0; i < count; i++)
@@ -241,8 +223,7 @@ public class Program {
         System.out.println("|");
     }
 
-    private static void printAttendanceTable(String[] students, int sCount, int[][] att, int[] tDates, int tCount)
-    {
+    private static void printAttendanceTable(String[] students, int sCount, int[][] att, int[] tDates, int tCount){
         for (int s = 0; s < sCount; s++)
         {
             System.out.printf("%-12s", students[s]);
@@ -256,8 +237,7 @@ public class Program {
         }
     }
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
 
         String[] students = new String[MAX_STUDENTS];
@@ -279,5 +259,6 @@ public class Program {
 
         printHeader(tHours, tDays, tDates, tCount);
         printAttendanceTable(students, studentCount, attendance, tDates, tCount);
+        sc.close();
     }
 }

@@ -1,31 +1,26 @@
 import java.util.Scanner;
 
+
 public class Program {
 
     // Count frequency of each character
-    public static int[] countFrequencies(String input) {
+    public static int[] countFrequencies(String input){
         int[] freq = new int[65536];
-        for (int i = 0; i < input.length(); i++) {
+        for (int i = 0; i < input.length(); i++)
             freq[input.charAt(i)]++;
-//            System.out.println("input[i] = " + input.charAt(i) + " freq[input.charAt(i)] = " + freq[input.charAt(i)]);
-        }
-//        for (int i = 0; i < freq.length; i++) {
-//            if (freq[i] > 0) {
-//                System.out.println("'" + (char) i + "' : " + freq[i]);
-//            }
-//        }
         return freq;
     }
 
     // Find top 10 most frequent characters
-    public static void findTop10(int[] freq, char[] topChars, int[] topFreqs)
-    {
+    public static void findTop10(int[] freq, char[] topChars, int[] topFreqs){
         for (int i = 0; i < 65536; i++) {
             if (freq[i] == 0)
                 continue;
 
-            for (int j = 0; j < 10; j++) {
-                if (freq[i] > topFreqs[j] || (freq[i] == topFreqs[j] && i < topChars[j])) {
+            for (int j = 0; j < 10; j++)
+            {
+                if (freq[i] > topFreqs[j] || (freq[i] == topFreqs[j] && i < topChars[j]))
+                 {
                     // Shift elements to the right
                     for (int k = 9; k > j; k--) {
                         topFreqs[k] = topFreqs[k - 1];
@@ -39,7 +34,7 @@ public class Program {
         }
     }
 
-    public static void printHistogram(char[] topChars, int[] topCounts) {
+    public static void printHistogram(char[] topChars, int[] topCounts){
         int maxCount = topCounts[0];
         if (maxCount == 0) {
             System.out.println();
@@ -82,39 +77,18 @@ public class Program {
         }
     }
 
+    public static void main(String[] args){
+       Scanner in = new Scanner(System.in);
+       String input = in.nextLine();
+       in.close();
 
-
-    public static void main(String[] args) {
-//        Scanner in = new Scanner(System.in);
-//        String input = in.nextLine();
-//        in.close();
-
-        String input = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASSSSSSSSSSSSSSSSSSSSSSSSDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDWEWWKFKKDKKDSKAKLSLDKSKALLLLLLLLLLRTRTETWTWWWWWWWWWWOOOOOOO42";
         int[] freq = countFrequencies(input);
         char[] topChars = new char[10];
         int[] topFreqs = new int[10];
 
         findTop10(freq, topChars, topFreqs);
-//        System.out.println(topFreqs);
-//        int[] heights = scaleFrequencies(topFreqs);
         printHistogram(topChars, topFreqs);
     }
-
 }
 
 // AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASSSSSSSSSSSSSSSSSSSSSSSSDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDWEWWKFKKDKKDSKAKLSLDKSKALLLLLLLLLLRTRTETWTWWWWWWWWWWOOOOOOO42
-
-
-
-//36
-//# 35
-//# #
-//# # 27
-//# # #
-//# # #
-//# # #
-//# # # 14 12
-//# # # # # 9
-//# # # # # # 7 4
-//# # # # # # # # 2 2
-//D A S W L K O T E R

@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
+
 public class Program {
+
     public static boolean isPrime(int number) throws Exception {
         int Count = 0;
 
@@ -33,7 +35,6 @@ public class Program {
             int Number = Integer.parseInt(Input);
             isPrime(Number);
         } catch (Exception e) {
-            // Single error message for all exceptions
             System.err.println("IllegalArgument");
         }
         ReadLine.close();
