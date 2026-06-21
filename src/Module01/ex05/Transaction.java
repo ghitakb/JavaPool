@@ -79,4 +79,3 @@ public class Transaction {
                 + "To: " + this.getRecipient().getName() + "\n" );
     }
 }
-
